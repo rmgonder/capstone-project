@@ -1,1 +1,103 @@
-text
+/* universal styles */
+
+body {
+  font-family: Arial;
+  font-size: 12px;
+  color: gray;
+  background-color: lightgray;
+  text-align: center;
+  width: 100%;
+}
+
+/* header */
+
+header {
+ background-color: white;
+ width: 100%;
+ display: inline-flex;
+ height: 64px;
+}
+
+.logo {
+  float: left;
+  padding-left: 24px;
+  display: inline-flex;
+}
+
+.name {
+  float: left;
+  text-transform: uppercase;
+  display: inline-flex;
+  padding-right: 1250px;
+}
+
+.name h4 {
+  color: black;
+  font-size: 14px;
+  font-weight: 1000;
+  height: 32px;
+}
+
+
+.name h5 {
+  color: gray;
+  font-size: 14px;
+}
+
+.menu li {
+  display: inline-block;
+  list-style: none;
+  float: left;
+  padding: 16px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: gray;
+}
+
+/* Hero Banner */
+
+.hero-banner {
+  text-align: left;
+}
+
+.hero-image {
+  width: 60%;
+  height: auto;
+  padding: 32px 24px;
+  display: inline-flex;
+  float: left;
+}
+
+.h2 {
+  display: inline-block;
+  padding-top: 400px;
+  font-size: 40px;
+}
+
+/* Main Information */
+
+.main-content {
+  background-color: white;
+  display: inline-flex;
+  width: 100%;
+}
+
+.information img {
+  float: left;
+  display: block;
+  width: 60%;
+  height: auto;
+  padding: 24px 32px;
+  margin: 0px auto;
+}
+
+.main {
+  display: inline-block;
+  float: left;
+}
+
+.main img {
+  display: inline-block;
+}
