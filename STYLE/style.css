@@ -16,6 +16,8 @@ header {
  width: 100%;
  display: inline-flex;
  height: 64px;
+ margin: -15px;
+ margin-left: -30px;
 }
 
 .logo {
@@ -76,28 +78,60 @@ header {
   font-size: 40px;
 }
 
+.start-button {
+
+}
+
 /* Main Information */
 
 .main-content {
   background-color: white;
   display: inline-flex;
-  width: 100%;
+  float: left;
 }
 
 .information img {
   float: left;
-  display: block;
   width: 60%;
   height: auto;
-  padding: 24px 32px;
-  margin: 0px auto;
+  padding: 32px 24px;
+}
+
+.information hgroup {
+  float: left;
+  width: 60%;
+  height: auto;
+  padding-left: 24px;
+  text-align: left;
+}
+
+.information h2 {
+  font-size: 50px;
+}
+
+.information p {
+  font-size: 24px;
+}
+
+.information h4 {
+  font-size: 16px;
 }
 
 .main {
   display: inline-block;
+  width: 40%;
+  padding-top: 24px;
   float: left;
 }
 
 .main img {
   display: inline-block;
+  float: left;
+
+}
+
+.main ul {
+  list-style: none;
+  text-align: left;
+
 }
