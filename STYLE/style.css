@@ -72,14 +72,15 @@ header {
   float: left;
 }
 
-.h2 {
+.new {
   display: inline-block;
   padding-top: 400px;
   font-size: 40px;
+  width: 40%;
 }
 
 .start-button {
-
+  padding-bottom: 32px;
 }
 
 /* Main Information */
@@ -134,4 +135,77 @@ header {
   list-style: none;
   text-align: left;
 
+}
+
+/* courses section */
+
+.learning {
+  font-size: 50px;
+  display: inline-block;
+  padding-top: 32px;
+}
+
+.courses {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  padding-left: 72px;
+}
+
+.software, .computer, .design, .data, .business, .marketing {
+  margin: 16px 16px 16px 24px;
+  background-color: white;
+  text-align: left;
+
+}
+
+.courses h3 {
+  font-size: 32px;
+  margin-left: 16px;
+}
+
+.courses p {
+  font-size: 16px;
+  margin-left: 16px;
+}
+
+.software {
+
+}
+
+/* Thesis Section */
+
+#thesis {
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+
+.left {
+  float: left;
+  width: 60%;
+}
+
+.right {
+  float: left;
+  width: 40%;
+  display: block;
+}
+
+/* footer */
+
+.footer {
+  display: inline-flex;
+  float: left;
+}
+
+.footer li {
+  list-style: none;
+  float: left;
+}
+
+.footer li a {
+  float: right;
 }
