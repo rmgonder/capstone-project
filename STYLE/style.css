@@ -61,27 +61,62 @@ header {
 /* Hero Banner */
 
 .hero-banner {
-  text-align: left;
+  display: inline-flex;
+  float: left;
+  width: 100%;
 }
 
 .hero-image {
-  width: 60%;
+  width: 100%;
   height: auto;
   padding: 32px 24px;
   display: inline-flex;
   float: left;
+  margin-right: 24px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  padding: 32px 24px;
 }
 
 .new {
+  align-self: center;
+  width: 100%;
+}
+.new hgroup {
   display: inline-block;
-  padding-top: 400px;
-  font-size: 40px;
-  width: 40%;
+  align-self: center;
+  text-align: left;
+  font-size: 45px;
+  width: 75%;
+  margin-right: 24px;
+  margin-left: 24px;
 }
 
-.start-button {
-  padding-bottom: 32px;
+.new p {
+  font-size: 30px;
+  padding-bottom: 24px;
 }
+
+.button {
+  display: block;
+  overflow: hidden;
+  margin-right: 24px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  width: 80%;
+  height: auto;
+  line-height: 75px;
+  background-color: #494949;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  float: left;
+  font-size: 24px;
+  padding: 8px;
+}
+
 
 /* Main Information */
 
@@ -176,23 +211,53 @@ header {
 
 /* Thesis Section */
 
-#thesis {
-  width: 100%;
-  height: auto;
+
+
+.thesis {
   background-color: white;
+  display: inline-flex;
+  float: left;
 }
 
-
-.left {
+.title {
+  display: block;
+  width: 100%;
+}
+.left video {
   float: left;
   width: 60%;
+  height: auto;
+  padding: 32px 24px;
+}
+
+.left hgroup {
+  float: left;
+  width: 60%;
+  height: auto;
+  padding-left: 24px;
+  text-align: left;
+}
+
+.left h3 {
+  font-size: 50px;
+}
+
+.left p {
+  font-size: 24px;
 }
 
 .right {
-  float: left;
+  display: inline-block;
   width: 40%;
-  display: block;
+  padding-top: 24px;
+  float: left;
 }
+
+.right img {
+  display: inline-block;
+  float: left;
+}
+
 
 /* footer */
 
