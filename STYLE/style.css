@@ -4,9 +4,10 @@ body {
   font-family: Arial;
   font-size: 12px;
   color: gray;
-  background-color: lightgray;
+  background-color: #DCDFE0;
   text-align: center;
   width: 100%;
+  align-self: auto;
 }
 
 /* header */
@@ -30,32 +31,40 @@ header {
   float: left;
   text-transform: uppercase;
   display: inline-flex;
-  padding-right: 1250px;
+  padding-right: 1200px;
 }
 
 .name h4 {
-  color: black;
+  color: #494949;
   font-size: 14px;
   font-weight: 1000;
   height: 32px;
+  align-items: center;
+  padding-right: 1.5px;
 }
 
 
 .name h5 {
   color: gray;
   font-size: 14px;
+  height: 32px;
+  align-items: center;
 }
 
 .menu li {
   display: inline-block;
   list-style: none;
   float: left;
-  padding: 16px;
+  padding-left: 16px;
+  align-items: center;
+  padding-top: 14px;
 }
 
 .menu li a {
   text-decoration: none;
   color: gray;
+  font-size: 16px;
+  align-self: center;
 }
 
 /* Hero Banner */
@@ -98,6 +107,8 @@ header {
 .new p {
   font-size: 30px;
   padding-bottom: 24px;
+  line-height: 32px;
+  text-align: left;
 }
 
 .button {
@@ -121,28 +132,38 @@ header {
 /* Main Information */
 
 .main-content {
-  background-color: white;
   display: inline-flex;
-  float: left;
+  width: 100%;
+  height: auto;
+  background-color: white;
+}
+
+.information {
+  width: 60%;
+  height: auto;
+  margin-right: 24px;
 }
 
 .information img {
-  float: left;
-  width: 60%;
+  width: 100%;
   height: auto;
   padding: 32px 24px;
+  float: left;
+  margin-right: 24px;
 }
 
 .information hgroup {
   float: left;
-  width: 60%;
+  width: 100%;
   height: auto;
   padding-left: 24px;
   text-align: left;
 }
 
 .information h2 {
-  font-size: 50px;
+  font-size: 45px;
+  display: inline;
+  color: #494949;
 }
 
 .information p {
@@ -153,23 +174,53 @@ header {
   font-size: 16px;
 }
 
-.main {
-  display: inline-block;
+.sidebar {
   width: 40%;
-  padding-top: 24px;
-  float: left;
-}
-
-.main img {
+  height: auto;
   display: inline-block;
-  float: left;
-
 }
 
-.main ul {
-  list-style: none;
-  text-align: left;
+.orientation, .campus, .lecture {
+  float: left;
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  padding-left: 24px;
+  margin-left: 24px;
+  margin-top: 32px;
+}
 
+.orientation-img, .campus-img, .lecture-img {
+  float: left;
+}
+
+.orientation-ul, .campus-ul, .lecture-ul {
+  text-align: left;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
+.lecture-img {
+  margin-bottom: 32px;
+}
+
+.sidebar h3 {
+  font-size: 32px;
+  color: #494949;
+}
+
+.sidebar p {
+  font-size: 24px;
+}
+
+.sidebar a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #077ABC;
+}
+
+.lecture-ul p {
+  line-height: 2px;
 }
 
 /* courses section */
@@ -178,6 +229,7 @@ header {
   font-size: 50px;
   display: inline-block;
   padding-top: 32px;
+  color: #494949;
 }
 
 .courses {
@@ -198,11 +250,14 @@ header {
 .courses h3 {
   font-size: 32px;
   margin-left: 16px;
+  color: #494949;
 }
 
 .courses p {
   font-size: 16px;
   margin-left: 16px;
+  line-height: 5px;
+  padding-bottom: 12px;
 }
 
 .software {
@@ -211,7 +266,15 @@ header {
 
 /* Thesis Section */
 
-
+.thesis-heading {
+  background-color: white;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: -12px;
+  font-size: 32px;
+  color: #494949;
+  margin-top: 32px;
+}
 
 .thesis {
   background-color: white;
@@ -219,58 +282,128 @@ header {
   float: left;
 }
 
-.title {
-  display: block;
-  width: 100%;
-}
-.left video {
-  float: left;
+.left {
   width: 60%;
   height: auto;
-  padding: 32px 24px;
+  margin-right: 24px;
 }
 
-.left hgroup {
-  float: left;
-  width: 60%;
+.left video {
+  width: 100%;
   height: auto;
-  padding-left: 24px;
+  padding: 32px 24px;
+  float: left;
+  margin-right: 24px;
+}
+
+.left-h {
+  float: left;
+  width: 100%;
+  height: auto;
   text-align: left;
+  padding-left: 24px;
 }
 
 .left h3 {
-  font-size: 50px;
+  font-size: 52px;
+  display: inline;
+  color: #494949;
+  text-align: left;
 }
 
 .left p {
   font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 32px;
 }
 
 .right {
-  display: inline-block;
   width: 40%;
-  padding-top: 24px;
-  float: left;
-}
-
-.right img {
+  height: auto;
   display: inline-block;
-  float: left;
 }
 
+.fisma, .now {
+  float: left;
+  width: 90%;
+  height: auto;
+  display: inline-flex;
+  margin-left: 24px;
+}
+
+.fisma {
+  background-color: #DCDFE0;
+  margin-top: 32px;
+  padding: 16px;
+}
+
+.now {
+  border: solid 1px white;
+  background-color: white;
+  padding: 16px;
+}
+
+.fisma-img, .now-img {
+  float: left;
+  margin-right: 24px;
+  width: 35%;
+  height: auto;
+
+}
+
+.fisma h3, .now h3 {
+  text-align: left;
+  padding-top: 24px;
+  padding-left: 32px;
+  font-size: 32px;
+}
+
+.fisma p, .now p {
+  text-align: left;
+  padding-left: 32px;
+  font-size: 24px;
+  line-height: 2px;
+  align-self: center;
+}
 
 /* footer */
 
 .footer {
   display: inline-flex;
   float: left;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-top: solid 0.5px gray;
+  font-size: 12px;
 }
 
-.footer li {
-  list-style: none;
+.footer-left {
+  width: 50%;
+  height: auto;
+  align-self: center;
+}
+
+.footer-left p {
+  text-align: left;
+  padding-left: 24px;
+}
+
+.footer-right {
+  width: 50%;
+  height: auto;
+  align-self: center;
   float: left;
+  padding-left: 24px;
 }
 
-.footer li a {
+
+.footer-right a {
+  display: inline-flex;
+  list-style: none;
   float: right;
+  padding-left: 5px;
+  padding-right: 24px;
+  text-align: right;
+  text-decoration: none;
 }
