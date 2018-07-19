@@ -1,0 +1,406 @@
+html {
+  font-family: 'Montserrat', sans-serif;
+  color: #606060;
+  margin: 0 auto;
+}
+
+.mobile {
+  display: none;
+}
+
+/* Text features Start */
+
+h1 {
+  font-weight: bold;
+  font-size: 36px;
+  padding-bottom: 24px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 150%;
+}
+
+em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+a {
+  color: #5189BC;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Text features End */
+/* Header Start */
+
+header {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  float: right;
+  align-items: center;
+  z-index: 5;
+  background-color: #08477F;
+  height: 62px;
+  width: 100%;
+}
+
+header img {
+  margin-left: 24px;
+  height: 32px;
+}
+
+header p {
+  text-transform: uppercase;
+  color: #5189BC;
+  font-size: 18px;
+}
+
+header strong {
+  font-weight: bold;
+  color: #2F70AA;
+}
+
+ul {
+  position: fixed;
+  text-align: right;
+  right: 24px;
+  width: 100%;
+}
+
+header li {   /* Oddly spaced from the top */
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+  header ul, header p {
+    display: none;
+  }
+
+  header img { /* Not working */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .mobile {
+    display: flex;
+  }
+}
+
+/* Header End */
+/* Main banner section Start */
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 62px;
+  background-color: #FFDA63;
+  position: relative;
+  text-align: left;
+}
+
+.banner img {
+  display: inline-block;
+  width: 60%;
+  height: 60%;
+  padding: 24px 32px;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  margin: 32px 24px;
+  height: 70%;
+  color: #9B7600;
+}
+
+.banner button {
+  margin-top: 24px;
+  padding: 8px;
+  color: white;
+  background-color: #C59600;
+  color: #FFDA63;
+  width: 60%;
+  font-size: 16px;
+  align-self: left;
+}
+
+@media only screen and (max-width: 800px) {
+  .banner img, .banner-text {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner button {
+    align-self: center;
+  }
+
+  .banner-text {
+    padding: 32px 16px;
+  }
+}
+
+/* Main banner section End */
+/* "Info-main" section Start */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  background-color: #5189BC;
+  color: #08477F;
+}
+
+.container a {
+  color: #2F70AA;
+}
+
+#on-campus {
+  display: inline-flex;
+  flex-direction: column;
+  width: 68%;
+  padding: 32px 24px;
+}
+
+.on-campus-desktop img {
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.sidebar {
+  width: 40%;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  display: flex;
+  border: 2px solid #2F70AA;
+}
+
+.sidebar-item img {
+  width: 35%;
+  height: auto;
+  max-height: 150px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.sidebar-text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+  justify-content: center;
+  width: 60%;
+  line-height: 2;
+}
+
+@media only screen and (max-width: 800px) {
+  .on-campus-desktop {
+    display: none;
+  }
+
+  .sidebar { /* needs to override container... */
+    width: 500000%;   /* Doesn't make sense */
+    align-self: center;
+  }
+
+  .sidebar-item {
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+  }
+
+  .sidebar-item img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .sidebar-text {
+    display: block flex;
+    flex-direction: column;
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 801px) {
+  .sidebar-item img{ /* needs to override container... */
+    display: none;
+  }
+
+  .sidebar-text {
+    padding: 16px;
+  }
+}
+
+/* "Info-main" section End */
+/* "Start learning" (courses) section Start */
+
+#online{
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  text-align: center;
+  justify-content: center;
+  background-color: #FFDA63;
+  color: #9B7600;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  justify-content: center;
+  margin: 0 72px;
+}
+
+.course-box {
+  background-color: #FFC200;
+  text-align: left;
+  height: auto;
+  width: 350px;
+  margin: 0 16px 32px;
+}
+
+.course-box img {
+  height: 179px;
+  overflow: hidden;
+  position: center;
+}
+
+.course-textbox {
+  padding: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+  #online {
+    background-color: #FFDA63;
+    border-top: 1px solid #FFC200;
+    border-bottom:1px solid #FFC200;
+  }
+
+  .course-box {
+    width: 95%;
+    background-color: #FFC200;
+  }
+
+  .course-box img, .courses p {
+    display: none;
+  }
+
+  .courses h3 {
+    text-align: center;
+  }
+}
+
+/* "Start learning" (courses) section End */
+/* "Thesis exhibit" section Start */
+
+#thesis {
+  display: flex;
+  flex-direction: column;
+  background-color: #5189BC;
+}
+
+#thesis h1{
+  padding: 32px;
+  text-align: center;
+  color: #08477F;
+}
+
+#thesis h3 {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+#thesis p {
+  padding-bottom: 32px;
+}
+
+.video {
+  width: 60%;
+  padding: 24px;
+  padding-top: 0;
+}
+
+video {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  #thesis .sidebar, .video p, .video h3 {
+    display: none;
+  }
+
+  .video {
+    width: 100%;
+    padding: 0 0 24px 0;
+  }
+
+  #thesis .sidebar
+}
+
+/* "Thesis exhibit" section End */
+/* Footer Start */
+
+footer {
+  display: flex;
+  padding: 32px 0;
+  background-color: #08477F;
+  border-top: 2px solid #5189BC;
+  color: #5189BC;
+}
+
+footer p {
+  padding-left: 32px;
+}
+
+footer .no-border {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+
+footer span {
+  padding-right: 16px;
+}
+
+/* Footer End */
+
+@media only screen and (max-width: 800px) {
+  footer .no-border {
+    width: 100%;
+  }
+
+  footer span {
+    display: none;
+  }
+}

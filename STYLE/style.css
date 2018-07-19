@@ -1,6 +1,6 @@
 /* universal styles */
 
-body {
+html {
   font-family: Arial;
   font-size: 12px;
   color: gray;
@@ -8,6 +8,7 @@ body {
   text-align: center;
   width: 100%;
   align-self: auto;
+  margin: 0 auto;
 }
 
 /* header */
@@ -16,6 +17,8 @@ header {
  background-color: white;
  width: 100%;
  display: inline-flex;
+ flex-direction: row;
+ z-index: 5;
  height: 64px;
  margin: -15px;
  margin-left: -30px;
@@ -23,7 +26,7 @@ header {
 
 .logo {
   float: left;
-  padding-left: 24px;
+  margin-left: 24px;
   display: inline-flex;
 }
 
@@ -32,24 +35,19 @@ header {
   text-transform: uppercase;
   display: inline-flex;
   padding-right: 1200px;
+  margin-top: 1px;
+  font-size: 18px;
 }
 
-.name h4 {
+.name strong {
   color: #494949;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 1000;
   height: 32px;
-  align-items: center;
+  align-self: center;
   padding-right: 1.5px;
 }
 
-
-.name h5 {
-  color: gray;
-  font-size: 14px;
-  height: 32px;
-  align-items: center;
-}
 
 .menu li {
   display: inline-block;
@@ -65,6 +63,21 @@ header {
   color: gray;
   font-size: 16px;
   align-self: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .menu li, .name {
+    display: none;
+  }
+
+  .logo { /* Not working */
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .mobile {
+    display: flex;
+  }
 }
 
 /* Hero Banner */
@@ -85,14 +98,15 @@ header {
 }
 
 .hero-image img {
-  width: 100%;
+  width: 123%;
   height: auto;
-  padding: 32px 24px;
+
 }
 
 .new {
   align-self: center;
   width: 100%;
+
 }
 .new hgroup {
   display: inline-block;
@@ -101,7 +115,7 @@ header {
   font-size: 45px;
   width: 75%;
   margin-right: 24px;
-  margin-left: 24px;
+  margin-left: 200px;
 }
 
 .new p {
@@ -126,6 +140,27 @@ header {
   float: left;
   font-size: 24px;
   padding: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+  .banner img, .banner-text {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner button {
+    align-self: center;
+  }
+
+  .banner-text {
+    padding: 32px 16px;
+  }
 }
 
 
@@ -223,6 +258,45 @@ header {
   line-height: 2px;
 }
 
+@media only screen and (max-width: 800px) {
+  .on-campus-desktop {
+    display: none;
+  }
+
+  .sidebar { /* needs to override container... */
+    width: 500000%;   /* Doesn't make sense */
+    align-self: center;
+  }
+
+  .orientation, .campus, .lecture {
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+  }
+
+  .orientation-img, .campus-img, .lecture-img {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .sidebar h3, .sidebar p, .sidebar a{
+    display: block flex;
+    flex-direction: column;
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 801px) {
+  .orientation-img, .campus-img, .lecture-img{ /* needs to override container... */
+    display: none;
+  }
+
+  .sidebar h3, .sidebar p, .sidebar a {
+    padding: 16px;
+  }
+}
+
+
 /* courses section */
 
 .learning {
@@ -244,7 +318,7 @@ header {
   margin: 16px 16px 16px 24px;
   background-color: white;
   text-align: left;
-
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .courses h3 {
@@ -260,9 +334,30 @@ header {
   padding-bottom: 12px;
 }
 
-.software {
+@media only screen and (max-width: 800px) {
+  .courses, .learning {
+    background-color: #494949;
+    border-top: 1px solid #494949;
+    border-bottom:1px solid #494949;
+    color: white;
+    padding: 24px;
+  }
+  .software, .computer, .design, .data, .business, .marketing {
+    width: 95%;
+    background-color: #494949;
+    color: inherit;
+  }
 
+  .courses img, .courses h3, .courses p {
+    display: none;
+  }
+
+  .courses h3 {
+    text-align: center;
+    color: white;
+  }
 }
+
 
 /* Thesis Section */
 
@@ -317,6 +412,12 @@ header {
   padding-bottom: 32px;
 }
 
+@media only screen and (max-width: 800px) {
+  .thesis, .left video, .left-h {
+    display: none;
+    }
+  }
+
 .right {
   width: 40%;
   height: auto;
@@ -334,13 +435,17 @@ header {
 .fisma {
   background-color: #DCDFE0;
   margin-top: 32px;
+  margin-bottom: 5px;
   padding: 16px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .now {
   border: solid 1px white;
+  border-radius: 2px;
   background-color: white;
   padding: 16px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .fisma-img, .now-img {
@@ -406,4 +511,11 @@ header {
   padding-right: 24px;
   text-align: right;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .footer {
+    width: 100%;
+    display: none;
+  }
 }
